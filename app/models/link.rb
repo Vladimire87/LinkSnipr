@@ -5,7 +5,7 @@ class Link < ApplicationRecord
 
   def url_encode
     url_hash_id = Hashids.new(original_url)
-    hash = url_hash_id.encode(id)
+    url_hash_id.encode(id)
   end
 
   def url_decode

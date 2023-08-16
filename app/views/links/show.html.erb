@@ -1,2 +1,10 @@
 <h1>Links#show</h1>
 <p>Find me in app/views/links/show.html.erb</p>
+<%= @link.url_encode %>
+<%= link_to "http://localhost:3000/" + @link.url_encode, @link.original_url %>
+<div class="card">
+  <div class="card-body">
+    <input class="form-control-plaintext" type="text" name="snipr" value="<%= "http://localhost:3000/" + @link.snipr %>">
+    <a class="btn btn-primary btn-lg " href="#" role="button">Copy</a>
+  </div>
+</div>

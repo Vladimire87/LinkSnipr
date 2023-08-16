@@ -1,0 +1,10 @@
+<%= form_with model: @link, url: links_path do |f| %>
+  <div class="container-md col-md-5">
+    <div class="input-group mb-3">
+      <%= f.text_field :original_url, class: "form-control form-control-lg", placeholder: "Enter Link", aria_label: "Enter Link", aria_describedby: "button-addon2", autofocus: true %>
+      <%# <input type="text" class="form-control form-control-lg" placeholder="Enter Link" aria-label="Enter Link" aria-describedby="button-addon2"> %>
+      <%= f.submit "Create Link", class: "btn btn-danger", id: "button-addon2" %>
+      <%# <button class="btn btn-outline-secondary" type="button" id="button-addon2">Create Link</button> %>
+    </div>
+  </div>
+<% end %>

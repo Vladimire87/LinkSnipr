@@ -1,6 +1,3 @@
 <h1>Links#new</h1>
 <p>Find me in app/views/links/new.html.erb</p>
-<%= form_with model: @link do |f| %>
-  <%= f.text_field :original_url %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form' %>

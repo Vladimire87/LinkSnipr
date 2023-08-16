@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_15_164011) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_16_095944) do
   create_table "links", force: :cascade do |t|
     t.text "original_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "snipr"
   end
 
 end
