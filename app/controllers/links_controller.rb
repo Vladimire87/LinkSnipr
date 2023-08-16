@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
@@ -21,7 +23,7 @@ class LinksController < ApplicationController
   def redirect
     hash = params[:hash]
 
-    if @link = Link.find_by(snipr: hash)
+    if (@link = Link.find_by(snipr: hash))
       redirect_to @link.original_url, status: :found, allow_other_host: true
     else
       flash[:warning] = 'We dont have such link'
