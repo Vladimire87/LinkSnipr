@@ -1,14 +1,14 @@
 <div class="w-100h d-flex justify-content-center b-g-red">
   <%= link_to root_path do %>
-    <%= image_tag 'LinkSNIPR-logos.jpeg', height: "260px"%>
+    <%= image_tag 'LinkSNIPR-logos.jpeg', style: "max-height: 230px" %>
   <% end %>
 </div>
 <div class="container">
   <div>
-    <h1 class="display-3 p-5 text-center">Paste the URL to be shortened.</h1>
+    <h1 class="display-3 p-3 text-center">Paste the URL to be shortened.</h1>
   </div>
-  <%= render 'links/form' %>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+  <%= render partial: 'links/form' %>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 py-3">
     <div class="col d-flex align-items-start">
       <i class="bi bi-coin text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
       <div>
