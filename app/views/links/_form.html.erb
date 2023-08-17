@@ -3,7 +3,7 @@
     <div class="input-group col-md-10">
       <%= f.text_field :original_url, class: "form-control form-control-lg", placeholder: "Enter Link", aria_label: "Enter Link", aria_describedby: "button-addon2", autofocus: true %>
       <%# <input type="text" class="form-control form-control-lg" placeholder="Enter Link" aria-label="Enter Link" aria-describedby="button-addon2"> %>
-      <%= f.submit "Create Link", class: "btn btn-danger", id: "button-addon2" %>
+      <%= f.submit "Create Link", class: "btn btn-danger", id: "button-addon2", data: { turbo_frame: "snipr"} %>
       <%# <button class="btn btn-outline-secondary" type="button" id="button-addon2">Create Link</button> %>
     </div>
   </div>
