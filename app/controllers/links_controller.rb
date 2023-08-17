@@ -26,8 +26,7 @@ class LinksController < ApplicationController
     if (@link = Link.find_by(snipr: hash))
       redirect_to @link.original_url, status: :found, allow_other_host: true
     else
-      flash[:warning] = 'We dont have such link'
-      render :new, status: :unprocessable_entity
+      render file: "#{Rails.public_path.join('404.html')}", status: :not_found, layout: false
     end
   end
 
