@@ -1,42 +1,8 @@
-<div class="w-100h d-flex justify-content-center b-g-red">
-  <%= link_to root_path do %>
-    <%= image_tag 'LinkSNIPR-logos.jpeg', style: "max-height: 230px" %>
-  <% end %>
-</div>
-<div class="container">
+<div class="container col-md-12 col-lg-8">
   <div>
     <h1 class="display-3 p-3 text-center">Paste the URL to be shortened.</h1>
   </div>
   <%= render partial: 'links/form' %>
   <%= turbo_frame_tag "snipr" %>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 py-3">
-    <div class="col d-flex align-items-start">
-      <i class="bi bi-coin text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
-      <div>
-        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Free</h3>
-        <p>Enjoy link shortening absolutely charges-free.</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <i class="bi bi-emoji-smile text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
-      <div>
-        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Easy</h3>
-        <p>Seamless, user-friendly experience for hassle-free shortening.</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <i class="bi bi-fingerprint text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
-      <div>
-        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Secure</h3>
-        <p>Rest assured, your data remains confidential and safe..</p>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <i class="bi bi-hdd-network text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
-      <div>
-        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Reliable</h3>
-        <p>Count on our consistently trustworthy service.</p>
-      </div>
-    </div>
-  </div>
+  <%= render 'shared/emphasis' %>
 </div>
