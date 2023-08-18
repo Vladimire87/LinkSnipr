@@ -1,10 +1,10 @@
 <%= turbo_frame_tag 'snipr' do %>
-  <div class="row col-md-6 mx-auto my-4 w-100 p-2">
+  <div class="row col-md-10 col-lg-8 mx-auto my-4 p-2">
     <div class="card">
       <div class="card-body p-2 d-flex justify-content-around">
-        <div class="p-2 rounded gap-4 col-md-10 d-flex">
-          <input class="form-control" type="text" name="snipr" value="<%= root_url + @link.snipr %>">
-          <a class="btn btn-danger gap-2 d-flex" href="#" role="button"><i class="bi bi-clipboard-check"></i>Copy</a>
+        <div class="p-2 rounded gap-4 col-md-10 d-flex" data-controller="clipboard" data-clipboard-success-content-value="SNIPERED!">
+          <input class="form-control" type="text" name="snipr" value="<%= root_url + @link.snipr %>" data-clipboard-target="source" />
+          <a type="button" class="btn btn-danger gap-2 d-flex" data-action="clipboard#copy" data-clipboard-target="button"><i class="bi bi-clipboard-check"></i>Copy</a>
         </div>
       </div>
     </div>
