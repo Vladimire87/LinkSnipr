@@ -3,6 +3,17 @@
 class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
+    require 'rqrcode'
+
+    qrcode = RQRCode::QRCode.new(@link.original_url)
+
+    @svg = qrcode.as_svg(
+      color: '000',
+      shape_rendering: 'crispEdges',
+      module_size: 3,
+      standalone: true,
+      use_path: true
+    )
   end
 
   def new
@@ -37,7 +48,7 @@ class LinksController < ApplicationController
   end
 
   def url_enc
-    url_hash_id = Hashids.new(@link.original_url, 6)
+    url_hash_id = Hashids.new(@link.original_url, 5)
     url_hash_id.encode(@link.id)
   end
 end
