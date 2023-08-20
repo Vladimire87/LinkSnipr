@@ -3,6 +3,7 @@
 class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
+
   end
 
   def new
@@ -37,7 +38,7 @@ class LinksController < ApplicationController
   end
 
   def url_enc
-    url_hash_id = Hashids.new(@link.original_url, 6)
+    url_hash_id = Hashids.new(@link.original_url, 5)
     url_hash_id.encode(@link.id)
   end
 end
