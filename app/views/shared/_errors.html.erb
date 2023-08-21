@@ -1,0 +1,9 @@
+<% if object.errors.full_messages.any? %>
+  <div class="container col-sm-6 col-md-8 d-flex justify-content-center alert alert-warning" role="alert">
+    <ul class="mb-0">
+      <% object.errors.full_messages.each do |msg| %>
+        <li>Enter valid Link</li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
