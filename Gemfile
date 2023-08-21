@@ -75,3 +75,5 @@ group :development do
 end
 
 gem "rqrcode", "~> 2.2"
+
+gem "google-analytics-rails", "~> 1.1"
