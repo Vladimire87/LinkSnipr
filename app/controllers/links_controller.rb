@@ -14,6 +14,8 @@ class LinksController < ApplicationController
     if @link.save
       @link.snipr = url_enc
       @link.save
+      session[:shortened_links] ||= []
+      session[:shortened_links] << @link
       redirect_to link_path @link
     else
       render :new, status: :unprocessable_entity
