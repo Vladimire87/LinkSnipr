@@ -1,0 +1,16 @@
+<button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Links</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Links</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <% @shortened_links.each do |l| %>
+      <div class="card mb-2 p-2">
+        <div class="card-body">
+          <p><abbr title="<%= l["original_url"] %>"><%= root_url + l["snipr"] %></abbr></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
