@@ -5,7 +5,8 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <% @shortened_links.each do |l| %>
+    <p>Refresh Page</p>
+    <% @shortened_links.each do|l| %>
       <div class="card mb-2 p-2">
         <div class="card-body">
           <p><abbr title="<%= l["original_url"] %>"><%= root_url + l["snipr"] %></abbr></p>

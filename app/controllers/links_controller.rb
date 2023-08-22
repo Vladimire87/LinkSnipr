@@ -28,7 +28,10 @@ class LinksController < ApplicationController
     if (@link = Link.find_by(snipr: hash))
       redirect_to @link.original_url, status: :found, allow_other_host: true
     else
-      render file: "#{Rails.public_path.join('404.html')}", status: :not_found, layout: false
+      @link = Link.new
+      @shortened_links = session[:shortened_links] || []
+      flash[:notice] = 'Sorry link with that Snipr is dead.'
+      render 'pages/index', status: :unprocessable_entity
     end
   end
 

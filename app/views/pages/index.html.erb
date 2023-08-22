@@ -2,6 +2,7 @@
   <div>
     <h1 class="display-3 p-3 text-center">Paste the URL to be shortened.</h1>
   </div>
+  <%= render 'shared/flash' %>
   <%= render partial: 'links/form' %>
   <%= turbo_frame_tag "snipr" %>
   <%= render 'shared/emphasis' %>

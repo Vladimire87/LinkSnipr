@@ -74,6 +74,6 @@ group :development do
   # gem "spring"
 end
 
-gem "rqrcode", "~> 2.2"
+gem 'rqrcode', '~> 2.2'
 
-gem "google-analytics-rails", "~> 1.1"
+gem 'google-analytics-rails', '~> 1.1'
